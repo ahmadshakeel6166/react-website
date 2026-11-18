@@ -41,10 +41,10 @@ export const Navbar = ({ onSelectCategory, onOpenTracking, searchQuery, setSearc
 
   const navLinks = [
     { label: 'New Arrivals', id: 'all' },
-    { label: 'Women Pret', id: 'women' },
-    { label: 'Men Atelier', id: 'men' },
-    { label: 'Haute Festive', id: 'luxury-pret' },
-    { label: 'Mini Élan', id: 'kids' },
+    { label: 'Women', id: 'women' },
+    { label: 'Men', id: 'men' },
+    { label: 'Festive Pret', id: 'luxury-pret' },
+    { label: 'Kids', id: 'kids' },
     { label: 'Lookbook', href: '#lookbook' }
   ];
 
@@ -130,17 +130,17 @@ export const Navbar = ({ onSelectCategory, onOpenTracking, searchQuery, setSearc
             </div>
 
             {/* Left Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-7">
+            <nav className="hidden lg:flex items-center space-x-5 xl:space-x-6">
               {navLinks.map((link) => {
                 const isActive = activeCategory === link.id;
                 return (
                   <button
                     key={link.label}
                     onClick={() => handleNavClick(link)}
-                    className={`text-[12px] xl:text-[13px] tracking-[0.14em] uppercase font-medium transition-all relative py-1 ${
+                    className={`text-[10.5px] xl:text-[11px] tracking-[0.14em] uppercase font-medium transition-all relative py-1 ${
                       isActive
                         ? 'text-elan-gold font-semibold'
-                        : 'text-neutral-700 hover:text-elan-gold'
+                        : 'text-neutral-600 hover:text-elan-gold'
                     }`}
                   >
                     {link.label}
